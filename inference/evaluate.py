@@ -43,10 +43,10 @@ def main():
             pred = recognise_faces(img)
             print(f"{pred} - {name}")
             total +=1
-            if pred==name:
+            if pred.lower()==name.lower():
                 correct += 1
 
-    print(f"Accuracy: {correct/(total+0.001)}")
+    print(f"Accuracy: {correct/(total)}")
 
 
 if __name__ == '__main__':
