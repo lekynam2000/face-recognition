@@ -40,7 +40,7 @@ def main():
         for data in data_list:
             img = Image.open(data["path"])
             img = preprocess(img).convert('RGB')
-            pred = recognise_faces()
+            pred = recognise_faces(img)
             print(f"{pred} - {name}")
             total +=1
             if pred==name:
