@@ -41,7 +41,7 @@ def main():
             img = Image.open(data["path"])
             img = preprocess(img).convert('RGB')
             pred = recognise_faces(img)
-            print(f"{pred} - {name}")
+            print(f"|{pred.lower()}| - |{name.lower()}| : {pred.lower()==name.lower()}")
             total +=1
             if pred.lower()==name.lower():
                 correct += 1
